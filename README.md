@@ -10,6 +10,7 @@ The FrozenLake environment in OpenAI Gym is a gridworld problem that challenges 
 Value iteration is a method of computing an optimal MDP policy and its value.
 It begins with an initial guess for the value function, and iteratively updates it towards the optimal value function, according to the Bellman optimality equation.
 The algorithm is guaranteed to converge to the optimal value function, and in the process of doing so, also converges to the optimal policy.
+
 The algorithm is as follows:
 
 1.Initialize the value function V(s) arbitrarily for all states s.
@@ -25,7 +26,7 @@ Where theta is a small positive number that determines the accuracy of estimatio
 Update the value function V with the maximum action-value from Q.
 Go to step 2. 4.The optimal policy can be constructed by taking the argmax of the action-value function Q(s, a) over all actions a. 5.Return the optimal policy and the optimal value function.
 
-This MDP algorithmn is written for Goal state of (3,0) with state number as 12.
+This MDP using the value iteration algorithmn is written for Goal state as (3,0) with state number as 12.
 
 ## VALUE ITERATION FUNCTION
 ```
