@@ -25,12 +25,24 @@ Where theta is a small positive number that determines the accuracy of estimatio
 Update the value function V with the maximum action-value from Q.
 Go to step 2. 4.The optimal policy can be constructed by taking the argmax of the action-value function Q(s, a) over all actions a. 5.Return the optimal policy and the optimal value function.
 
+This MDP algorithmn is written for Goal state of (3,0) with state number as 12.
+
 ## VALUE ITERATION FUNCTION
 ```
 NAME:DHANUMALYA.D
 REGISTER NUMBER:212222230030
 ```
 ```
+## Code for Goal state as (3,0) with state number as 12
+desc=['SFHF','FFFH','FFHF','GFFH']
+env=gym.make('FrozenLake-v1',desc=desc)
+init_state=env.reset()
+goal_state=12
+P=env.env.P
+init_state
+```
+```
+## Value Iteration Algorithm
 def value_iteration(P, gamma=1.0, theta=1e-10):
     V = np.zeros(len(P), dtype=np.float64)
     while True:
@@ -49,13 +61,13 @@ def value_iteration(P, gamma=1.0, theta=1e-10):
 
 ## OUTPUT:
 ## Optimal policy
-![Screenshot 2024-03-12 235333](https://github.com/Dhanudhanaraj/rl-value-iteration/assets/119218812/be619169-7b83-4b36-ba0e-02a921a72e1a)
+![Screenshot 2024-03-13 182918](https://github.com/Dhanudhanaraj/rl-value-iteration/assets/119218812/a4ac2d6a-162b-4aa4-88db-0239cd6a3bc1)
 
 ## Optimal value function
-![Screenshot 2024-03-12 235401](https://github.com/Dhanudhanaraj/rl-value-iteration/assets/119218812/821c3816-c0e9-413d-8ef9-306695b59349)
+![Screenshot 2024-03-13 182936](https://github.com/Dhanudhanaraj/rl-value-iteration/assets/119218812/7a9aa36d-1135-438c-9e32-202108f638bf)
 
 ## Success rate for the optimal policy.
-![Screenshot 2024-03-12 235345](https://github.com/Dhanudhanaraj/rl-value-iteration/assets/119218812/675ce63e-c3e9-4d81-bc0d-b0bce8e278c3)
+![Screenshot 2024-03-13 182928](https://github.com/Dhanudhanaraj/rl-value-iteration/assets/119218812/e8abfca1-6e3c-4ce8-a958-48a9c67187e9)
 
 ## RESULT:
 Thus, a Python program is developed to find the optimal policy for the given MDP using the value iteration algorithm.
